@@ -12,7 +12,8 @@ class SearchBar extends React.Component {
   onFormSubmit = event => {
     //prevents browser from refreshing page on submit
     event.preventDefault();
-    //TODO: Make sure we call callback from parent component
+    //calls to parent prop from App with the value of state
+    this.props.onFormSubmit(this.state.term);
   };
 
   render() {
